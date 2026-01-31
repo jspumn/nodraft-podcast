@@ -1,6 +1,6 @@
 ---
 layout: home
-title: NoDraft Podcast
+title: 自己來找你喜歡的東西吧
 ---
 
 <div style="text-align: center; margin-bottom: 40px;">
@@ -10,7 +10,7 @@ title: NoDraft Podcast
 
 ---
 
-🎙 **NoDraft Podcast**
+🎙 **主持人是誰**
 
 
 🙋‍♂️ Jesper – An infectious disease researcher/scientist in Minnesota, trying hard to uncover (personal/subjective) insights into nearly everything.
@@ -22,7 +22,13 @@ title: NoDraft Podcast
 ## 🎧 立即收聽 (Latest Episode)
 
 ## 🎧 最新集數收聽
-<iframe src="https://rss.com/podcasts/2023nodraft/embed/" style="width: 100%; height: 200px;" frameborder="0" scrolling="no"></iframe>
+
+<iframe src="https://rss.com/podcasts/2023nodraft/2481595/embed/" 
+  style="width: 100%; height: 200px;" 
+  frameborder="0" 
+  scrolling="no" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+</iframe>
 
 [🍎 Apple Podcasts]({{ site.podcast.apple }}) | [🟢 Spotify]({{ site.podcast.spotify }}) | [📡 RSS Feed](https://rss.com/podcasts/2023nodraft/)
 
