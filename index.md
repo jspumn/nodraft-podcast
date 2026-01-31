@@ -19,18 +19,28 @@ title: 自己來找你喜歡的東西吧
 
 ---
 
-## 🎧 立即收聽 (Latest Episode)
+## 🎧 最新集數收聽
 
 ## 🎧 最新集數收聽
 
-<iframe src="https://rss.com/podcasts/2023nodraft/2481595/embed/" 
-  style="width: 100%; height: 200px;" 
-  frameborder="0" 
-  scrolling="no" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-</iframe>
+{% assign latest_post = site.posts.first %}
+{% if latest_post.rss_id %}
+  <iframe src="https://rss.com/podcasts/2023nodraft/{{ latest_post.rss_id }}/embed/" 
+    style="width: 100%; height: 200px;" 
+    frameborder="0" 
+    scrolling="no">
+  </iframe>
+  <p>正在收聽：<b>{{ latest_post.title }}</b></p>
+{% else %}
+  <iframe src="https://rss.com/podcasts/2023nodraft/embed/" 
+    style="width: 100%; height: 200px;" 
+    frameborder="0" 
+    scrolling="no">
+  </iframe>
+{% endif %}
 
 [🍎 Apple Podcasts]({{ site.podcast.apple }}) | [🟢 Spotify]({{ site.podcast.spotify }}) | [📡 RSS Feed](https://rss.com/podcasts/2023nodraft/)
+
 
 ---
 
