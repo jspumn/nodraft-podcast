@@ -21,30 +21,22 @@ title: NoDraft Podcast
 
 ## 🎧 立即收聽 (Latest Episode)
 
-<iframe src="https://rss.com/podcasts/2023nodraft/embed/" 
-  style="width: 100%;" 
-  title="NoDraft Podcast" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-  shell="true" 
-  height="200">
-</iframe>
+## 🎧 最新集數收聽
+<iframe src="https://rss.com/podcasts/2023nodraft/embed/" style="width: 100%; height: 200px;" frameborder="0" scrolling="no"></iframe>
 
-<div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px; flex-wrap: wrap;">
-  <a href="{{ site.podcast.apple }}" target="_blank" style="background: #A033FF; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 14px;">🍎 Apple Podcasts</a>
-  <a href="{{ site.podcast.spotify }}" target="_blank" style="background: #1DB954; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 14px;">🟢 Spotify</a>
-  <a href="https://rss.com/podcasts/2023nodraft/" target="_blank" style="background: #FF5722; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 14px;">📡 RSS Feed</a>
-</div>
+[🍎 Apple Podcasts]({{ site.podcast.apple }}) | [🟢 Spotify]({{ site.podcast.spotify }}) | [📡 RSS Feed](https://rss.com/podcasts/2023nodraft/)
 
 ---
 
 ## 📝 歷集 Show Notes
-（點擊標題查看詳細內容與視覺圖表）
 
 {% for post in site.posts %}
-<div style="margin-bottom: 30px; padding: 15px; border-left: 4px solid #e1e4e8;">
-  <h3 style="margin-top: 0;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-  <small style="color: #888;">📅 發布於 {{ post.date | date: "%Y-%m-%d" }}</small>
-  <p style="margin-top: 10px;">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-</div>
+### [{{ post.title }}]({{ post.url }})
+*📅 發布於 {{ post.date | date: "%Y-%m-%d" }}*
+
+{{ post.excerpt | strip_html | truncatewords: 25 }}
+[...繼續閱讀]({{ post.url }})
+
+---
 {% endfor %}
+
