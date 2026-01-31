@@ -1,6 +1,11 @@
 title: NoDraft Podcast
 theme: minima
 
+podcast:
+  apple: https://podcasts.apple.com/ca/podcast/%E4%B8%8D%E6%89%93%E8%8D%89%E7%A8%BF-no-draft/id1692033875
+  spotify: https://open.spotify.com/show/0nrSpTsuxRS8TzVsluynVy
+
+
 header_pages:
   - index.md
   - vivi.md
