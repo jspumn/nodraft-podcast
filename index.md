@@ -16,11 +16,23 @@ title: 草稿之外 NoDraft Podcast
 
 ## 🎧 最新集數收聽
 
-<iframe src="https://rss.com/podcasts/2023nodraft/embed/" style="width: 100%; height: 200px;" frameborder="0" scrolling="no"></iframe>
+{% if site.posts.size > 0 %}
+  {% assign latest_post = site.posts.first %}
+  <iframe src="https://rss.com/podcasts/2023nodraft/{{ latest_post.rss_id }}/embed/" style="width: 100%; height: 200px;" frameborder="0" scrolling="no"></iframe>
+{% else %}
+  <iframe src="https://rss.com/podcasts/2023nodraft/embed/" style="width: 100%; height: 200px;" frameborder="0" scrolling="no"></iframe>
+{% endif %}
 
-[🍎 Apple Podcasts]({{ site.podcast.apple }}) | [🟢 Spotify]({{ site.podcast.spotify }}) | [📡 RSS Feed](https://rss.com/podcasts/2023nodraft/)
+[🍎 Apple Podcasts]({{ site.podcast.apple }}) | [🟢 Spotify]({{ site.podcast.spotify }})
 
 ---
 
 ## 📝 歷集 Show Notes
-*(目前尚無集數，請建立 _posts 資料夾並新增 markdown 檔案後即可顯示)*
+
+{% if site.posts.size > 0 %}
+  {% for post in site.posts %}
+  * [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%Y-%m-%d" }}
+  {% endfor %}
+{% else %}
+  *內容正在準備中，敬請期待。*
+{% endif %}
