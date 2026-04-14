@@ -80,11 +80,25 @@ a { text-decoration: none; }
 
 .portal__logo span { color: var(--first-color); }
 
-.portal__logo p {
-  color: var(--text-color-light);
-  font-size: .9rem;
+.portal__logo p.portal__subtitle {
+  color: var(--first-color);
+  font-size: 1.2rem;
   letter-spacing: 2px;
   margin-top: .5rem;
+  font-weight: 500;
+}
+
+.portal__intro {
+  margin-top: 1.5rem;
+  max-width: 500px;
+  color: var(--text-color);
+  font-size: .85rem;
+  line-height: 1.8;
+  background: rgba(0,0,0,0.4);
+  padding: 1rem;
+  border-radius: .5rem;
+  backdrop-filter: blur(5px);
+  pointer-events: auto; /* Allow reading comfortably */
 }
 
 .split-screen {
