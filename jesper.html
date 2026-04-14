@@ -14,55 +14,76 @@
         <nav class="nav container">
             <a href="index.html" class="nav__logo">NO<span>DRAFT</span></a>
             <ul class="nav__list">
-                <li><a href="index.html" class="nav__link">返回入口</a></li>
-                <li><a href="#episodes" class="nav__link">他的劇集</a></li>
-                <li><a href="vivi.html" class="nav__link">切換到 Vivi</a></li>
+                <li><a href="index.html" class="nav__link">返回門戶</a></li>
+                <li><a href="#episodes" class="nav__link">探索集數</a></li>
+                <li><a href="vivi.html" class="nav__link">切換 Vivi</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="host-hero container">
-            <div class="grid">
-                <div>
+            <div class="grid" style="grid-template-columns: 1.2fr 0.8fr; align-items: center; width: 100%;">
+                <div class="host-header-content">
+                    <p class="host-tagline">Cyber / Creativity / Future</p>
                     <h1 class="host-name">Jesper</h1>
-                    <p class="host-tagline">科技 / 創意 / 數位未來</p>
-                    <p class="host-intro">
-                        你好，我是 Jesper。在「不草稿」的空間裡，我負責帶領大家探索那些正在改變世界的技術細節與創意火花。
-                        我不相信標準答案，只相信不斷的提問。
-                    </p>
-                    <a href="#episodes" class="split__btn" style="background: var(--jesper-color); border:none;">瀏覽剧集</a>
+                    <div class="host-intro">
+                        <p>
+                            「技術不應該是冰冷的，它應該是充滿溫度的創作工具。」<br><br>
+                            我是 Jesper。在這裡，我們解構 Web3、AI、與所有正在改變遊戲規則的數位趨勢。不打草稿，只探尋真理的脈絡。
+                        </p>
+                    </div>
+                    <a href="#episodes" class="button">查看最新研究</a>
                 </div>
-                <div style="text-align: right;">
-                    <img src="jesper.png" alt="Jesper" style="width: 300px; border-radius: 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                <div class="host-img-container">
+                    <img src="jesper.png" alt="Jesper" class="host-img">
+                    <div class="host-img-decorative"></div>
                 </div>
             </div>
         </section>
 
         <section id="episodes" class="section container">
-            <h2 class="section__title">Jesper 的精選集數</h2>
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div style="margin-bottom: 4rem;">
+                <h2 style="font-size: 3rem; margin-bottom: 1rem;">LATEST EPISODES</h2>
+                <div style="width: 60px; height: 4px; background: var(--jesper-color);"></div>
+            </div>
+            
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
                 <article class="episode__card">
-                    <span style="color:var(--jesper-color)">EP05</span>
-                    <h3>Web3 是否已經破滅？</h3>
-                    <p>我們回顧過去一年的趨勢，尋找區塊鏈技術在喧囂後的真實價值...</p>
+                    <div class="episode__meta">
+                        <span>EP 05</span>
+                        <span>2026.04.14</span>
+                    </div>
+                    <h3 class="episode__title">Web3 是否已經破滅？</h3>
+                    <p class="episode__text">我們回顧過去一年的趨勢，尋找區塊鏈技術在喧囂後的真實價值...</p>
+                    <a href="#" style="color: var(--jesper-color); font-weight: 700; margin-top: 2rem;">LISTEN NOW →</a>
                 </article>
+
                 <article class="episode__card">
-                    <span style="color:var(--jesper-color)">EP03</span>
-                    <h3>AI 時代的創意生存指南</h3>
-                    <p>當機器開始創作，我們的雙手應該放在哪裡？深度解析人類創意的邊界...</p>
+                    <div class="episode__meta">
+                        <span>EP 03</span>
+                        <span>2026.03.28</span>
+                    </div>
+                    <h3 class="episode__title">AI 時代的創意生存指南</h3>
+                    <p class="episode__text">當機器開始創作，我們的雙手應該放在哪裡？深度解析人類創意的邊界...</p>
+                    <a href="#" style="color: var(--jesper-color); font-weight: 700; margin-top: 2rem;">LISTEN NOW →</a>
                 </article>
+
                 <article class="episode__card">
-                    <span style="color:var(--jesper-color)">EP01</span>
-                    <h3>為什麼我們不打草稿？</h3>
-                    <p>談談資訊焦慮時代中，即興發揮與真實表達的重要性...</p>
+                    <div class="episode__meta">
+                        <span>EP 01</span>
+                        <span>2026.03.15</span>
+                    </div>
+                    <h3 class="episode__title">不打草稿的價值</h3>
+                    <p class="episode__text">談談資訊焦慮時代中，即興發揮與真實表達的重要性...</p>
+                    <a href="#" style="color: var(--jesper-color); font-weight: 700; margin-top: 2rem;">LISTEN NOW →</a>
                 </article>
             </div>
         </section>
     </main>
 
-    <footer class="portal__footer">
-        <p>No Draft Podcast ©️ 2026. Directed by Jesper.</p>
+    <footer class="footer">
+        <p class="footer__copy">JESPER @ NO DRAFT PODCAST 2026</p>
     </footer>
 </body>
 </html>

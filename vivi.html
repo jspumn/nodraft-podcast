@@ -7,62 +7,86 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        .host-theme-vivi .host-name { font-family: 'Playfair Display', serif; font-style: italic; text-transform: none; }
+    </style>
 </head>
 <body class="host-page host-theme-vivi">
     <header class="header">
         <nav class="nav container">
             <a href="index.html" class="nav__logo">NO<span>DRAFT</span></a>
             <ul class="nav__list">
-                <li><a href="index.html" class="nav__link">返回入口</a></li>
-                <li><a href="#episodes" class="nav__link">她的劇集</a></li>
-                <li><a href="jesper.html" class="nav__link">切換到 Jesper</a></li>
+                <li><a href="index.html" class="nav__link">返回門戶</a></li>
+                <li><a href="#episodes" class="nav__link">精選對話</a></li>
+                <li><a href="jesper.html" class="nav__link">切換 Jesper</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="host-hero container">
-            <div class="grid">
-                <div>
+            <div class="grid" style="grid-template-columns: 1.2fr 0.8fr; align-items: center; width: 100%;">
+                <div class="host-header-content">
+                    <p class="host-tagline" style="color: var(--vivi-color); opacity: 1;">Lifestyle / Human / Emotion</p>
                     <h1 class="host-name">Vivi</h1>
-                    <p class="host-tagline">生活 / 感性 / 人文對話</p>
-                    <p class="host-intro">
-                        我是 Vivi。歡迎來到我的感性空間。在這裡，我們不聊硬核的代碼，我們聊關於「人」的一切——
-                        那些溫柔的瞬間、深邃的憂鬱，以及在匆忙生活裡值得駐足的微光。
-                    </p>
-                    <a href="#episodes" class="split__btn" style="background: var(--vivi-color); border:none;">進入沙龍</a>
+                    <div class="host-intro">
+                        <p>
+                            「在文字抵達不了的地方，我們用聲音擁抱彼此。」<br><br>
+                            我是 Vivi。在這裡，我們聊關於成長的痛楚、生活的微光、與所有讓靈魂顫動的瞬間。讓對話回歸最原始的溫度。
+                        </p>
+                    </div>
+                    <a href="#episodes" class="button" style="background: var(--vivi-color); border:none;">進入感性沙龍</a>
                 </div>
-                <div style="text-align: right;">
-                    <img src="vivi.png" alt="Vivi" style="width: 300px; border-radius: 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                <div class="host-img-container">
+                    <img src="vivi.png" alt="Vivi" class="host-img">
+                    <div class="host-img-decorative"></div>
                 </div>
             </div>
         </section>
 
         <section id="episodes" class="section container">
-            <h2 class="section__title">Vivi 的感性對話</h2>
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div style="margin-bottom: 4rem; text-align: right;">
+                <h2 style="font-size: 3rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">The Dialogue</h2>
+                <div style="width: 60px; height: 4px; background: var(--vivi-color); margin-left: auto;"></div>
+            </div>
+            
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
                 <article class="episode__card">
-                    <span style="color:var(--vivi-color)">EP06</span>
-                    <h3>城市裡的孤獨經濟</h3>
-                    <p>為什麼我們在社交網絡上擁擠，卻在現實生活中感到孤立？探討現代人的情感需求...</p>
+                    <div class="episode__meta">
+                        <span>VOLUME 06</span>
+                        <span>2026.04.10</span>
+                    </div>
+                    <h3 class="episode__title" style="font-family: 'Playfair Display', serif;">城市裡的孤獨經濟</h3>
+                    <p class="episode__text">為什麼我們在社交網絡上擁擠，卻在現實生活中感到孤立？探討現代人的情感需求...</p>
+                    <a href="#" style="color: var(--vivi-color); font-weight: 700; margin-top: 2rem; font-style: italic;">LISTEN TO THE SOUL →</a>
                 </article>
+
                 <article class="episode__card">
-                    <span style="color:var(--vivi-color)">EP04</span>
-                    <h3>極簡主義不只是丟東西</h3>
-                    <p>如何透過整理物理空間，來釐清內在混亂的思緒。這是一場關於捨棄的修行...</p>
+                    <div class="episode__meta">
+                        <span>VOLUME 04</span>
+                        <span>2026.03.25</span>
+                    </div>
+                    <h3 class="episode__title" style="font-family: 'Playfair Display', serif;">極簡主義不只是丟東西</h3>
+                    <p class="episode__text">如何透過整理物理空間，來釐清內在混亂的思緒。這是一場關於捨棄的修行...</p>
+                    <a href="#" style="color: var(--vivi-color); font-weight: 700; margin-top: 2rem; font-style: italic;">LISTEN TO THE SOUL →</a>
                 </article>
+
                 <article class="episode__card">
-                    <span style="color:var(--vivi-color)">EP02</span>
-                    <h3>電影與我們的集體記憶</h3>
-                    <p>聊聊那些曾在深夜治癒過我們的經典電影，以及它們所承載的時代情感...</p>
+                    <div class="episode__meta">
+                        <span>VOLUME 02</span>
+                        <span>2026.03.10</span>
+                    </div>
+                    <h3 class="episode__title" style="font-family: 'Playfair Display', serif;">電影與我們的集體記憶</h3>
+                    <p class="episode__text">聊聊那些曾在深夜治癒過我們的經典電影，以及它們所承載的時代情感...</p>
+                    <a href="#" style="color: var(--vivi-color); font-weight: 700; margin-top: 2rem; font-style: italic;">LISTEN TO THE SOUL →</a>
                 </article>
             </div>
         </section>
     </main>
 
-    <footer class="portal__footer">
-        <p>No Draft Podcast ©️ 2026. Hosted by Vivi.</p>
+    <footer class="footer">
+        <p class="footer__copy" style="opacity: 0.5;">VIVI'S LOUNGE | NO DRAFT PODCAST 2026</p>
     </footer>
 </body>
 </html>
