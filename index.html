@@ -3,164 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Draft Podcast | 不草稿播客 - 沒事，就聊聊</title>
-    <meta name="description" content="No Draft Podcast (不草稿播客) 是一個關於生活、科技與創意的對談節目。我們不打草稿，只聊真心話。">
+    <title>No Draft Podcast | 入口門戶 - 探索 Jesper 與 Vivi 的世界</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">NO<span>DRAFT</span></a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">首頁</a></li>
-                    <li class="nav__item"><a href="#episodes" class="nav__link">最新集數</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">關於我們</a></li>
-                    <li class="nav__item"><a href="#subscribe" class="nav__link">訂閱</a></li>
-                </ul>
-            </div>
-            <div class="nav__social">
-                <a href="https://github.com/jspumn/nodraft-podcast" class="nav__social-link" target="_blank">
-                    <i class="ri-github-fill"></i>
-                </a>
-            </div>
-        </nav>
-    </header>
+<body class="portal-body">
+    <main class="portal">
+        <div class="portal__logo">
+            <h1>NO <span>DRAFT</span></h1>
+            <p>請選擇您的嚮導</p>
+        </div>
 
-    <main class="main">
-        <!-- HERO -->
-        <section class="hero section" id="home">
-            <div class="hero__container container grid">
-                <div class="hero__data">
-                    <h1 class="hero__title">不草稿 <br> <span>NO DRAFT</span></h1>
-                    <p class="hero__description">
-                        沒事，就聊聊。我們不追求完美的劇本，只追求最真實的共鳴。
-                        每週更新，帶你進入生活與思維的深層對話。
-                    </p>
-                    <div class="hero__buttons">
-                        <a href="#episodes" class="button">立即收聽</a>
-                        <a href="#subscribe" class="button button--ghost">訂閱頻道</a>
-                    </div>
+        <div class="split-screen">
+            <!-- JESPER SIDE -->
+            <a href="jesper.html" class="split jesper" id="jesper-side">
+                <div class="split__content">
+                    <img src="jesper.png" alt="Jesper" class="split__avatar">
+                    <h2 class="split__title">Jesper</h2>
+                    <p class="split__desc">科技、創意與數位未來的探索者</p>
+                    <span class="split__btn">進入空間 →</span>
                 </div>
-                <div class="hero__img-container">
-                    <img src="podcast_cover.png" alt="No Draft Podcast Cover" class="hero__img">
-                    <div class="hero__blob"></div>
-                </div>
-            </div>
-        </section>
+            </a>
 
-        <!-- PLAYER -->
-        <section class="player-section sticky-player">
-            <div class="player__container container">
-                <div class="player__info">
-                    <p class="player__status">正在播放</p>
-                    <h3 class="player__title" id="current-title">EP01 - 為什麼我們選擇「不打草稿」？</h3>
+            <!-- VIVI SIDE -->
+            <a href="vivi.html" class="split vivi" id="vivi-side">
+                <div class="split__content">
+                    <img src="vivi.png" alt="Vivi" class="split__avatar">
+                    <h2 class="split__title">Vivi</h2>
+                    <p class="split__desc">生活、感性與人文對話的傾聽者</p>
+                    <span class="split__btn">進入空間 →</span>
                 </div>
-                <div class="player__controls">
-                    <button class="player__btn" id="prev-btn">⏮</button>
-                    <button class="player__btn player__btn--main" id="play-btn">▶</button>
-                    <button class="player__btn" id="next-btn">⏭</button>
-                </div>
-                <div class="player__progress-container">
-                    <span id="current-time">00:00</span>
-                    <div class="player__progress-bar">
-                        <div class="player__progress" id="progress"></div>
-                    </div>
-                    <span id="duration">42:15</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- EPISODES -->
-        <section class="episodes section" id="episodes">
-            <div class="container">
-                <h2 class="section__title">最新集數</h2>
-                <div class="episodes__grid grid">
-                    <!-- EP 1 -->
-                    <article class="episode__card">
-                        <div class="episode__number">03</div>
-                        <div class="episode__content">
-                            <span class="episode__date">2026.04.14</span>
-                            <h3 class="episode__title">AI 時代的創意生存指南</h3>
-                            <p class="episode__text">當 AI 能夠寫詩、作畫，人類的獨特性還剩下什麼？我們深入探討如何與 AI 共存...</p>
-                            <button class="episode__play-btn" onclick="playEpisode('AI 時代的創意生存指南')">收聽此集</button>
-                        </div>
-                    </article>
-
-                    <!-- EP 2 -->
-                    <article class="episode__card">
-                        <div class="episode__number">02</div>
-                        <div class="episode__content">
-                            <span class="episode__date">2026.04.07</span>
-                            <h3 class="episode__title">極簡主義在數位生活的應用</h3>
-                            <p class="episode__text">你的收件匣是否堆滿了未讀？讓我們聊聊如何在大數據時代找回專注力...</p>
-                            <button class="episode__play-btn" onclick="playEpisode('極簡主義在數位生活的應用')">收聽此集</button>
-                        </div>
-                    </article>
-
-                    <!-- EP 3 -->
-                    <article class="episode__card">
-                        <div class="episode__number">01</div>
-                        <div class="episode__content">
-                            <span class="episode__date">2026.03.31</span>
-                            <h3 class="episode__title">為什麼我們選擇「不打草稿」？</h3>
-                            <p class="episode__text">首集揭秘 Podcast 的創立初衷，以及我們對「真實性」的執著...</p>
-                            <button class="episode__play-btn" onclick="playEpisode('為什麼我們選擇「不打草稿」？')">收聽此集</button>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section class="about section" id="about">
-            <div class="about__container container grid">
-                <div class="about__img-box">
-                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=600" alt="Podcast Studio" class="about__img">
-                </div>
-                <div class="about__data">
-                    <h2 class="section__title">關於不草稿</h2>
-                    <p class="about__description">
-                        No Draft Podcast 成立於 2026 年，由一群對數位文化、科技趨勢與人文思考充滿熱情的創作者發起。
-                        我們相信最好的對話往往發生在「草稿」之外，在那些未經修飾的瞬間，才能聽見最真實的聲音。
-                    </p>
-                    <ul class="about__list">
-                        <li class="about__item">每週二更新集數</li>
-                        <li class="about__item">深入淺出的話題解析</li>
-                        <li class="about__item">跨領域的嘉賓訪談</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- SUBSCRIBE -->
-        <section class="subscribe section" id="subscribe">
-            <div class="subscribe__container container">
-                <div class="subscribe__content">
-                    <h2 class="subscribe__title">訂閱我們，不錯過任何一刻</h2>
-                    <p class="subscribe__description">在您最喜愛的平台上追蹤 No Draft。</p>
-                    <div class="subscribe__links">
-                        <a href="#" class="subscribe__link">Apple Podcasts</a>
-                        <a href="#" class="subscribe__link">Spotify</a>
-                        <a href="#" class="subscribe__link">Google Podcasts</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </a>
+        </div>
     </main>
 
-    <footer class="footer">
-        <div class="footer__container container">
-            <div class="footer__content">
-                <a href="#" class="footer__logo">NO DRAFT</a>
-                <p class="footer__copy">&#169; 2026 No Draft Podcast. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <div class="portal__footer">
+        <p>No Draft Podcast ©️ 2026. Real Talk, No Drafts.</p>
+    </div>
 
-    <script src="main.js"></script>
+    <script>
+        const left = document.getElementById('jesper-side');
+        const right = document.getElementById('vivi-side');
+
+        left.addEventListener('mouseenter', () => {
+            left.style.flex = "2";
+            right.style.flex = "0.5";
+        });
+
+        left.addEventListener('mouseleave', () => {
+            left.style.flex = "1";
+            right.style.flex = "1";
+        });
+
+        right.addEventListener('mouseenter', () => {
+            right.style.flex = "2";
+            left.style.flex = "0.5";
+        });
+
+        right.addEventListener('mouseleave', () => {
+            right.style.flex = "1";
+            left.style.flex = "1";
+        });
+    </script>
 </body>
 </html>
